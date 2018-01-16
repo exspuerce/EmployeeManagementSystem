@@ -148,4 +148,39 @@ class EmployeeHandler : DatabaseHandler
 		{
 			return employee.password;
 		}
+
+		unittest
+		{
+			// Checks constructures
+			EmployeeHandler databaseHandler = new EmployeeHandler ( "127.0.0.1", "test.Employees");
+			writeln ( "Successfully connected to database" );
+
+			// Checks setters and getters
+			databaseHandler.setUsername ( "TestUsername" );
+			assert ( databaseHandler.getUsername () == "TestUsername" );
+			writeln ( "Username added: ", databaseHandler.getUsername () );
+			
+			databaseHandler.setName ( "Test Name" );
+			assert ( databaseHandler.getName () == "Test Name" );
+			writeln ( "Name added: ", databaseHandler.getName () );
+			
+			databaseHandler.setEmail ( "TestEmail@test.com" );
+			assert ( databaseHandler.getEmail () == "TestEmail@test.com" );
+			writeln ( "Email added: ", databaseHandler.getEmail () );
+			
+			databaseHandler.setPassword ( "TestPassword" );
+			assert ( databaseHandler.getPassword () == "TestPassword" );
+			writeln ( "Password added: ", databaseHandler.getPassword () );
+
+			// Checks creating data
+			assert ( databaseHandler.createData() );
+
+			// Checks updating data
+			databaseHandler.setEmail ( "newemail@gmail.com" );
+			assert ( databaseHandler.getEmail () == "newemail@gmail.com" );
+			assert ( databaseHandler.updateData( "TestUsername" ) );
+
+			// Checks deleting data
+			assert ( databaseHandler.deleteData( "TestUsername"));
+		}
 }
