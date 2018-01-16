@@ -174,13 +174,16 @@ class EmployeeHandler : DatabaseHandler
 
 			// Checks creating data
 			assert ( databaseHandler.createData() );
+			writeln ( "Created user" );
 
 			// Checks updating data
 			databaseHandler.setEmail ( "newemail@gmail.com" );
 			assert ( databaseHandler.getEmail () == "newemail@gmail.com" );
 			assert ( databaseHandler.updateData( "TestUsername" ) );
+			writeln ( "Updated user" );
 
 			// Checks deleting data
 			assert ( databaseHandler.deleteData( "TestUsername"));
+			writeln ( "Delete user" );
 		}
 }
