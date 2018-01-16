@@ -26,9 +26,15 @@ abstract class DatabaseHandler
 			}
 
 			abstract bool createData ();
-			abstract MongoCursor! ( Bson, User, typeof ( null ) ) readData ();
+			abstract MongoCursor! ( Bson, Employee, typeof ( null ) ) readData ();
 			abstract bool updateData ();
 			abstract bool deleteData ();
 }
 
-
+struct Employee
+{
+	string username;
+	string name;
+	string email;
+	string password;
+}
