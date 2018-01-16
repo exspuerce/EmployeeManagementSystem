@@ -1,0 +1,5 @@
+name "employeemangementsystem"
+description "A simple employee management application, using the D Language and vibe-d framework. It uses a mongo database, with some basic encryption."
+authors "Luke Bluett"
+copyright "Copyright © 2018, Luke Bluett"
+license "proprietary"
