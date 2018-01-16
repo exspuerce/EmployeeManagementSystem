@@ -4,6 +4,4 @@ authors "Luke Bluett"
 copyright "Copyright © 2018, Luke Bluett"
 license "proprietary"
 dependency "vibe-d" version="~>0.8.2"
-dependency "dauth" version="~>0.6.3"
-dependency "scrypt-d" version="~>0.1.1"
 
